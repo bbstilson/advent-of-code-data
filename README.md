@@ -1,8 +1,9 @@
 # Advent of Code Data
 
-![Important Badge][badge]
+![Important Badge][badge] ![Version][version]
 
 [badge]: https://cdn.rawgit.com/nikku/works-on-my-machine/v0.2.0/badge.svg
+[version]: https://img.shields.io/static/v1?label=version&message=0.1.0&color=blue
 
 Scala version of the [python library](https://github.com/wimglenn/advent-of-code-data) by the same name.
 
@@ -38,7 +39,7 @@ import aocd.Problem
 
 object Day1 extends Problem(2020, 1) {
   def run(input: List[String]): Unit = {
-    // solve the problem!
+    // you can do it!
   }
 }
 ```
