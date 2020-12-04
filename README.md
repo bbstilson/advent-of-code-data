@@ -11,7 +11,7 @@ Requires [Mill](https://github.com/lihaoyi/mill/) 0.9.3.
 
 ## Usage
 
-I'm too lazy to publish this on maven, so you will need to publish it locally:
+I haven't publish on maven yet, so it will need to be published locally:
 
 ```bash
 git clone https://github.com/bbstilson/advent-of-code-data.git
@@ -24,11 +24,11 @@ It's ready to use!
 Add it to your library deps:
 
 ```scala
-ivy"io.github.bbstilson::aocd:version" // mill
-"io.github.bbstilson" %% "aocd" % "version" // sbt
+ivy"io.github.bbstilson::aocd:0.1.0" // mill
+"io.github.bbstilson" %% "aocd" % "0.1.0" // sbt
 ```
 
-Export your session token, which can be grabbed from your cookies after authenticating on the Advent of Code site.
+Export your session token, which can be found in your browser cookies after authenticating on the Advent of Code site.
 
 ```bash
 export AOC_SESSION_TOKEN="whateveritis"
