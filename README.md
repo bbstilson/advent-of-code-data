@@ -7,6 +7,8 @@
 
 Scala version of the [python library](https://github.com/wimglenn/advent-of-code-data) by the same name.
 
+Requires [Mill](https://github.com/lihaoyi/mill/) 0.9.3.
+
 ## Usage
 
 I'm too lazy to publish this on maven, so you will need to publish it locally:

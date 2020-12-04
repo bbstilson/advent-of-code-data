@@ -1,4 +1,4 @@
-import $ivy.`io.github.davidgregory084::mill-tpolecat:0.1.3`
+import $ivy.`io.github.davidgregory084::mill-tpolecat:0.2.0`
 
 import mill._
 import mill.scalalib._
