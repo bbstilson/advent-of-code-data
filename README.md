@@ -21,7 +21,7 @@ mill aocd.publishLocal
 
 It's ready to use!
 
-Add the library do your library deps:
+Add it to your library deps:
 
 ```scala
 ivy"io.github.bbstilson::aocd:version" // mill
