@@ -28,11 +28,20 @@ ivy"io.github.bbstilson::aocd:0.1.0" // mill
 "io.github.bbstilson" %% "aocd" % "0.1.0" // sbt
 ```
 
-Export your session token, which can be found in your browser cookies after authenticating on the Advent of Code site.
+Next, export your session token or add it to `~/.aocd/token`.
 
 ```bash
-export AOC_SESSION_TOKEN="whateveritis"
+export AOC_SESSION_TOKEN="yoursessionstoken"
 ```
+
+or
+
+```bash
+mkdir -p ~/.aocd
+echo "yoursessionstoken" > ~/.aocd/token
+```
+
+Your token can be be found in your browser cookies after authenticating on the Advent of Code site.
 
 Now go solve the problem!
 
