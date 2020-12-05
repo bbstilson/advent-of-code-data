@@ -1,13 +1,16 @@
 package aocd
 
 abstract class Problem(year: Int, day: Int) {
-
-  val token = Option(System.getenv().get("AOC_SESSION_TOKEN")).getOrElse {
-    throw new RuntimeException(
-      "You must export your Advent of Code session token: AOC_SESSION_TOKEN"
-    )
-  }
-  val problemDir = os.home / ".aocd" / year.toString() / day.toString()
+  val assetsDir = os.home / ".aocd"
+  val tokenFile = assetsDir / "token"
+  val token: String =
+    Option(System.getenv().get("AOC_SESSION_TOKEN")).getOrElse {
+      if (os.exists(tokenFile)) os.read(tokenFile).strip()
+      else throw new RuntimeException(
+        "You must provide your Advent of Code session token as environment variable as AOC_SESSION_TOKEN or in ~/.aocd/token"
+      )
+    }
+  val problemDir = assetsDir / year.toString() / day.toString()
   val inputData = problemDir / "input.txt"
   if (!os.exists(problemDir)) os.makeDir.all(problemDir)
   if (!os.exists(inputData)) {
