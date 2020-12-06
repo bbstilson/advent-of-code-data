@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Set Up Mill
-        uses: jodersky/setup-mill@v0.2.2
+        uses: jodersky/setup-mill@v0.2.3
         with:
           mill-version: 0.9.3
 
