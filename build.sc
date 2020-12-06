@@ -9,7 +9,7 @@ import io.github.davidgregory084.TpolecatModule
 object aocd extends ScalaModule with PublishModule with TpolecatModule with ScalafmtModule {
   def scalaVersion = "2.13.4"
 
-  def publishVersion = "0.1.1"
+  def publishVersion = "0.1.2"
 
   def pomSettings = PomSettings(
     description = "Advent of Code Data",
