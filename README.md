@@ -7,11 +7,9 @@
 
 Scala version of the [python library](https://github.com/wimglenn/advent-of-code-data) by the same name.
 
-Requires [Mill](https://github.com/lihaoyi/mill/) 0.9.3.
-
 ## Usage
 
-I haven't publish on maven yet, so it will need to be published locally:
+I haven't publish on maven yet, so it will need to be published locally. Ensure you have at least [Mill](https://github.com/lihaoyi/mill/) 0.9.3.
 
 ```bash
 git clone https://github.com/bbstilson/advent-of-code-data.git
