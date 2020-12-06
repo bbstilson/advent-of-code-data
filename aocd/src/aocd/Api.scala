@@ -16,7 +16,6 @@ private[aocd] class Api {
 object Api extends Api {
   val USER_AGENT = "advent-of-code-data scala-v1"
 
-  // def mkUrl(year: Int, day: Int): String = s"https://adventofcode.com/$year/day/$day"
-  def mkUrl(year: Int, day: Int): String = s"https://brandonstilson.com/$year/day/$day"
+  def mkUrl(year: Int, day: Int): String = s"https://adventofcode.com/$year/day/$day"
   def mkInputUrl(year: Int, day: Int): String = mkUrl(year, day) + "/input"
 }
