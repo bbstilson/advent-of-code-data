@@ -24,6 +24,8 @@ jobs:
 
       - name: Set Up Mill
         uses: jodersky/setup-mill@v0.2.2
+        with:
+          mill-version: 0.9.3
 
       - name: Check Formatting
         run: mill aocd.checkFormat
