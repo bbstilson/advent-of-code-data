@@ -3,7 +3,7 @@
 ![Important Badge][badge] ![Version][version]
 
 [badge]: https://cdn.rawgit.com/nikku/works-on-my-machine/v0.2.0/badge.svg
-[version]: https://img.shields.io/static/v1?label=version&message=0.1.0&color=blue
+[version]: https://img.shields.io/static/v1?label=version&message=0.1.1&color=blue
 
 Scala version of the [python library](https://github.com/wimglenn/advent-of-code-data) by the same name.
 
@@ -24,8 +24,8 @@ It's ready to use!
 Add it to your library deps:
 
 ```scala
-ivy"io.github.bbstilson::aocd:0.1.0" // mill
-"io.github.bbstilson" %% "aocd" % "0.1.0" // sbt
+ivy"io.github.bbstilson::aocd:0.1.1" // mill
+"io.github.bbstilson" %% "aocd" % "0.1.1" // sbt
 ```
 
 Next, export your session token or add it to `~/.aocd/token`.
