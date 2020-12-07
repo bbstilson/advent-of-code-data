@@ -1,9 +1,10 @@
 # Advent of Code Data
 
-![Important Badge][badge] ![Maven][maven]
+![Important Badge][badge] [![Maven][maven]][mavenLink]
 
 [badge]: https://img.shields.io/badge/works-on%20my%20machine-success?style=for-the-badge
 [maven]: https://img.shields.io/maven-central/v/io.github.bbstilson/aocd_2.13?color=blue&style=for-the-badge
+[mavenLink]: https://search.maven.org/artifact/io.github.bbstilson/aocd_2.13
 
 Scala version of the [python library](https://github.com/wimglenn/advent-of-code-data) by the same name.
 
