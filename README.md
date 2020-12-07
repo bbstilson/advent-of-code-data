@@ -1,25 +1,13 @@
 # Advent of Code Data
 
-![Important Badge][badge] ![Version][version]
+![Important Badge][badge] ![Maven][maven]
 
-[badge]: https://cdn.rawgit.com/nikku/works-on-my-machine/v0.2.0/badge.svg
-[version]: https://img.shields.io/static/v1?label=version&message=0.1.2&color=blue
+[badge]: https://img.shields.io/badge/works-on%20my%20machine-success?style=for-the-badge
+[maven]: https://img.shields.io/maven-central/v/io.github.bbstilson/aocd_2.13?color=blue&style=for-the-badge
 
 Scala version of the [python library](https://github.com/wimglenn/advent-of-code-data) by the same name.
 
 ## Usage
-
-I haven't publish on maven yet, so it will need to be published locally. Ensure you have at least [Mill](https://github.com/lihaoyi/mill/) 0.9.3.
-
-```bash
-git clone https://github.com/bbstilson/advent-of-code-data.git
-cd advent-of-code-data
-mill aocd.publishLocal
-```
-
-It's ready to use!
-
-Add it to your library deps:
 
 ```scala
 ivy"io.github.bbstilson::aocd:0.1.2" // mill
@@ -56,3 +44,22 @@ object Day1 extends Problem(2020, 1) {
 ## Behind the Scenes
 
 Your data is downloaded to `~/.aocd/<YYYY>/<DD>/input.txt`. The download is only done once, subsequent runs will just read the data from that directory.
+
+## Publishing
+
+### Locally
+
+Ensure you have at least [Mill](https://github.com/lihaoyi/mill/) 0.9.3.
+
+```bash
+git clone https://github.com/bbstilson/advent-of-code-data.git
+cd advent-of-code-data
+mill aocd.publishLocal
+```
+
+This is useful if you want to make edits and test them out.
+
+### Maven
+
+1) Update the `publishVersion` in `build.sc` (and in this readme)
+2) Run `./bin/release.sh`
