@@ -11,8 +11,8 @@ Scala version of the [python library](https://github.com/wimglenn/advent-of-code
 ## Usage
 
 ```scala
-ivy"io.github.bbstilson::aocd:0.1.2" // mill
-"io.github.bbstilson" %% "aocd" % "0.1.2" // sbt
+ivy"io.github.bbstilson::aocd:0.1.3" // mill
+"io.github.bbstilson" %% "aocd" % "0.1.3" // sbt
 ```
 
 Next, export your session token or add it to `~/.aocd/token`.
@@ -41,6 +41,53 @@ object Day1 extends Problem(2020, 1) {
   }
 }
 ```
+
+## Timing
+
+Extending the `Problem` class provides you with 3 ways to time your functions: `part1`, `part2`, and `time`.
+
+Consider the following fake problem:
+
+```scala
+object Day99 extends aocd.Problem(2020, 99) {
+
+  def run(input: List[String]): Unit = {
+    // First, we do some prep work on our input.
+    val things = prep(input)
+    // Then, run part 1.
+    part1(things)
+    // Finally, run part 2.
+    part2(things)
+    ()
+  }
+
+  def prep(input: List[String]): List[Char] = time ("prep", {
+    // This takes a long time.
+    Thread.sleep(2000)
+    input.map(_.head)
+  })
+
+  def part1(chars: List[Char]): Int = part1 {
+    // Part 1 is fast.
+    Thread.sleep(50)
+    chars.size
+  }
+
+  def part2(chars: List[Char]): Int = part2 {
+    // Part 2 is kinda slow.
+    Thread.sleep(500)
+    chars.size
+  }
+}
+```
+
+Running this day would give us the following output:
+
+![output](./output.png)
+
+- Red: >1000ms
+- Yellow: >500ms
+- Green: < 100ms
 
 ## Behind the Scenes
 
