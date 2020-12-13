@@ -19,6 +19,28 @@ abstract class Problem(
   def main(args: Array[String]): Unit = run(os.read.lines(inputData).toList)
 
   def run(input: List[String]): Unit
+
+  final def part1[A](f: => A): A = time("part 1", f, withResult = true)
+  final def part2[A](f: => A): A = time("part 2", f, withResult = true)
+
+  final def time[A](prefix: String = "", block: => A, withResult: Boolean = false): A = {
+    val start = System.nanoTime()
+    val result = block
+    val end = System.nanoTime()
+    val (took, unit, color) = (end - start).toDouble / 1000000 match {
+      case ms if ms > 1000 => ((ms / 1000).toString(), "s", Console.RED)
+      case ms if ms > 100  => (ms.toString(), "ms", Console.YELLOW)
+      case ms              => (ms.toString(), "ms", Console.GREEN)
+    }
+    val timed = s"$prefix: " + color + s"${took.formatted("%-3.4s")}$unit" + Console.RESET
+    if (withResult) {
+      println(s"$timed - $result")
+    } else {
+      println(s"$timed")
+    }
+    result
+  }
+
 }
 
 object Problem {
