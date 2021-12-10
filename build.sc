@@ -7,9 +7,9 @@ import mill.scalalib.scalafmt._
 import io.github.davidgregory084.TpolecatModule
 
 object aocd extends ScalaModule with PublishModule with TpolecatModule with ScalafmtModule {
-  def scalaVersion = "2.13.4"
+  def scalaVersion = "2.13.7"
 
-  def publishVersion = "0.1.3"
+  def publishVersion = "0.1.4"
 
   def pomSettings = PomSettings(
     description = "Advent of Code Data",
@@ -24,16 +24,15 @@ object aocd extends ScalaModule with PublishModule with TpolecatModule with Scal
 
   def ivyDeps = Agg(
     ivy"com.lihaoyi::requests:0.6.5",
-    ivy"com.lihaoyi::os-lib:0.7.1"
+    ivy"com.lihaoyi::os-lib:0.7.8"
   )
 
-  object test extends Tests {
+  object test extends Tests with TestModule.Utest {
     def forkEnv = Map("AOC_SESSION_TOKEN" -> "foobar")
 
     def ivyDeps = Agg(
       ivy"com.lihaoyi::utest:0.7.2",
       ivy"org.mockito::mockito-scala:1.16.3"
     )
-    def testFrameworks = Seq("utest.runner.Framework")
   }
 }

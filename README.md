@@ -1,18 +1,18 @@
 # Advent of Code Data
 
-![Important Badge][badge] [![Maven][maven]][mavenLink]
+![Important Badge][badge] [![Maven][maven]][mavenlink]
 
 [badge]: https://img.shields.io/badge/works-on%20my%20machine-success?style=for-the-badge
 [maven]: https://img.shields.io/maven-central/v/io.github.bbstilson/aocd_2.13?color=blue&style=for-the-badge
-[mavenLink]: https://search.maven.org/artifact/io.github.bbstilson/aocd_2.13
+[mavenlink]: https://search.maven.org/artifact/io.github.bbstilson/aocd_2.13
 
 Scala version of the [python library](https://github.com/wimglenn/advent-of-code-data) by the same name.
 
 ## Usage
 
 ```scala
-ivy"io.github.bbstilson::aocd:0.1.3" // mill
-"io.github.bbstilson" %% "aocd" % "0.1.3" // sbt
+ivy"io.github.bbstilson::aocd:0.1.4" // mill
+"io.github.bbstilson" %% "aocd" % "0.1.4" // sbt
 ```
 
 Next, export your session token or add it to `~/.aocd/token`.
@@ -97,8 +97,6 @@ Your data is downloaded to `~/.aocd/<YYYY>/<DD>/input.txt`. The download is only
 
 ### Locally
 
-Ensure you have at least [Mill](https://github.com/lihaoyi/mill/) 0.9.3.
-
 ```bash
 git clone https://github.com/bbstilson/advent-of-code-data.git
 cd advent-of-code-data
@@ -109,5 +107,5 @@ This is useful if you want to make edits and test them out.
 
 ### Maven
 
-1) Update the `publishVersion` in `build.sc` (and in this readme)
-2) Run `./bin/release.sh`
+1. Update the `publishVersion` in `build.sc` (and in this readme)
+2. Run `./bin/release.sh`

@@ -32,7 +32,7 @@ abstract class Problem(
       case ms if ms > 100  => (ms.toString(), "ms", Console.YELLOW)
       case ms              => (ms.toString(), "ms", Console.GREEN)
     }
-    val timed = s"$prefix: " + color + s"${took.formatted("%-3.4s")}$unit" + Console.RESET
+    val timed = s"$prefix: " + color + s"${"%-3.4s".format(took)}$unit" + Console.RESET
     if (withResult) {
       println(s"$timed - $result")
     } else {
